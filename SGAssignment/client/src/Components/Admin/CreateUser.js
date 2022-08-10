@@ -7,9 +7,15 @@ export default class CreateUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: "",
+      id: "",
+      fname: "",
+      lname: "",
       email: "",
+      dob: "",
+      mobile: "",
+      status: "",
       password: "",
+      accType: "",
     };
   }
 
@@ -24,15 +30,30 @@ export default class CreateUser extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { name, email, password } = this.state;
+    const { id, fname, lname, email, dob, mobile, status, password, accType} = this.state;
     const data = {
-      name: name,
+      id: id,
+      fname: fname,
+      lname: lname,
       email: email,
+      dob: dob,
+      mobile: mobile,
+      status: status,
       password: password,
+      accType: accType,
     };
     console.log(data);
 
-    if (name.length === 0 || email.length === 0 || password.length === 0) {
+    if (
+      id.length === 0 ||
+      fname.length === 0 ||
+      lname.length === 0 ||
+      email.length === 0 ||
+      dob.length === 0 ||
+      status.length === 0 ||
+      password.length === 0 ||
+      accType.length === 0
+    ) {
       swal("Please fill all the details");
     } else {
       Axios.post("/cuser/save", data).then((res) => {
@@ -41,9 +62,15 @@ export default class CreateUser extends Component {
           alert("User Saved Successfully");
           this.props.history.push(path);
           this.setState({
-            name: "",
+            id: "",
+            fname: "",
+            lname: "",
             email: "",
+            dob: "",
+            mobile: "",
+            status: "",
             password: "",
+            accType: "",
           });
         }
       });
@@ -83,25 +110,80 @@ export default class CreateUser extends Component {
                 <br />
                 <br />
                 <div className="form-group" style={{ marginBottom: "15px" }}>
-                  <lable style={{ marginBottom: "5px" }}>Name</lable>
+                  <lable style={{ marginBottom: "5px" }}>ID number</lable>
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
-                    name="name"
-                    placeholder="Add Name"
-                    value={this.state.name}
+                    name="id"
+                    placeholder="Enter ID"
+                    value={this.state.id}
                     onChange={this.handleInputChange}
                   />
                 </div>
-
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>First Name</lable>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="fname"
+                    placeholder="Enter First name"
+                    value={this.state.fname}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Last Name</lable>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="lname"
+                    placeholder="Enter Last name"
+                    value={this.state.lname}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <lable style={{ marginBottom: "5px" }}>Email</lable>
                   <input
                     type="text"
                     className="form-control"
                     name="email"
-                    placeholder="Add an email"
+                    placeholder="Enter Email"
                     value={this.state.email}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Date of Birth</lable>
+                  <input
+                    type="date"
+                    className="form-control"
+                    name="dob"
+                    placeholder="Choose your DOB"
+                    value={this.state.dob}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Mobile</lable>
+                  <input
+                    type="number"
+                    className="form-control"
+                    name="mobile"
+                    placeholder="Enter Mobile number"
+                    value={this.state.mobile}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
+
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Status</lable>
+                  <input
+                    type="boolean"
+                    className="form-control"
+                    name="status"
+                    placeholder="Enter Status"
+                    value={this.state.status}
                     onChange={this.handleInputChange}
                   />
                 </div>

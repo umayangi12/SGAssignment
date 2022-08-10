@@ -190,7 +190,7 @@ export default class CreateUser extends Component {
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <lable style={{ marginBottom: "5px" }}>Password</lable>
                   <input
-                    type="text"
+                    type="password"
                     className="form-control"
                     name="password"
                     placeholder="Add a temporary password"
@@ -210,6 +210,8 @@ export default class CreateUser extends Component {
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
+                <br/>
+                <a href="/HSN"> Details</a>
               </center>
             </div>
           </div>

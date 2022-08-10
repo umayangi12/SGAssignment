@@ -233,7 +233,7 @@ export default class EditUser extends Component {
                     type="text"
                     className="form-control"
                     name="accType"
-                    placeholder="Add a account type"
+                    placeholder="Add an account type"
                     value={this.state.accType}
                     onChange={this.handleInputChange}
                   />

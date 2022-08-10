@@ -41,7 +41,7 @@ toggleIsShown = () => this.setState(({isShown}) => ({ isShown: !isShown}));
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ">
                   <li class="nav-item">
-                    <button className="btn btn-success"><a href="/SGH" style={{ textDecoration: 'none', color: 'white' }}>Add Users</a> </button>
+                    <button className="btn btn-success"><a href="/CU" style={{ textDecoration: 'none', color: 'white' }}>Add Users</a> </button>
                   </li>
                   
                   &nbsp; &nbsp; &nbsp;

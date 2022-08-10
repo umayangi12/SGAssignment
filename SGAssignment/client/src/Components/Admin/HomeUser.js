@@ -135,6 +135,9 @@ export default class HomeUser extends Component {
         <br />
         <br />
         <br />
+        <br />
+        <br />
+        <br />
       </div>
     );
   }

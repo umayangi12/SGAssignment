@@ -1,0 +1,4 @@
+{
+    "mongoURI": "mongodb+srv://SGA:sga123@sgassignment.9ml5n2z.mongodb.net/?retryWrites=true&w=majority",
+    "secretOrKey": "secret"
+}

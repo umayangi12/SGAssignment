@@ -1,0 +1,162 @@
+.hbody {
+  background-image: url("./uni.jpeg");
+    padding-top: 1%;
+    padding-bottom: 3%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+   }
+
+.imgstyle{
+    position: center;
+    margin-left: 5%;
+    margin-top: 8%;
+
+
+}
+.gfg {
+    margin: -1%;
+    position: relative;
+}
+
+.first-txt {
+    position: absolute;
+    color:white;
+    font-size: 25px;
+    top: 150px;
+    margin-left: 10%;
+}
+
+.second-txt{
+ 
+    bottom: 160px;
+    margin-left: 10%;
+    margin-top: -16%;
+    color: white;
+    font-size: 18px;
+    
+}
+.hcard {
+    box-shadow: 0 4px 8px 0 rgba(26, 26, 119, 0.696);
+    transition: 0.3s;
+    width: 20%;
+    height: 30%;
+    margin-left: 75%;
+    margin-top: -44%;
+    border-radius: 3%;
+  
+   
+  }
+  
+  .hcard:hover {
+    box-shadow: 0 8px 16px 0 rgba(29, 18, 184, 0.756);
+  }
+  
+  .hcontainer {
+    padding: 2px 16px;
+  }
+  .hcard2 {
+    box-shadow: 0 4px 8px 0 rgba(26, 26, 119, 0.696);
+    transition: 0.3s;
+    width: 20%;
+    height: 30%;
+    margin-left: 75%;
+    margin-top: -5%;
+    border-radius: 3%;
+    
+  }
+  .hcard2:hover {
+    box-shadow: 0 8px 16px 0 rgba(29, 18, 184, 0.756);
+  }
+  
+  .hcontainer2 {
+    padding: 2px 16px;
+  }
+  .h4-style{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style:oblique;
+    font-weight:bolder;
+  }
+  .h5-style{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight:bold;
+  }
+  .hcard3 {
+    box-shadow: 0 4px 8px 0 rgba(26, 26, 119, 0.696);
+    transition: 0.3s;
+    width: 20%;
+    height: 30%;
+    margin-left: 75%;
+    margin-top: -5%;
+    border-radius: 3%;
+    
+  }
+  .hcard3:hover {
+    box-shadow: 0 8px 16px 0 rgba(29, 18, 184, 0.756);
+  }
+  
+  .hcontainer3 {
+    padding: 2px 16px;
+  }
+
+  .btnbtn{
+    display: inline-block;
+    border-radius: 4px;
+    background-color:rgba(14, 7, 92, 0.796);
+    border: none;
+    color: #FFFFFF;
+    text-align:justify;
+    font-size: 18px;
+    padding: 15px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+  
+  .btnbtn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .btnbtn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .btnbtn:hover span {
+    padding-right: 25px;
+  }
+  
+  .btnbtn:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+  .hcard4 {
+    box-shadow: 0 4px 8px 0 rgba(26, 26, 119, 0.696);
+    transition: 0.3s;
+    width: 60%;
+    height: 30%;
+    margin-left: 3%;
+    margin-top: -35%;
+    opacity: 0.9;
+    
+  }
+  .hcard4:hover {
+    box-shadow: 0 8px 16px 0 rgba(29, 18, 184, 0.756);
+  }
+  
+  .hcontainer4 {
+    padding: 2px 16px;
+  }
+  .ch-color{
+    color: rgba(250, 15, 15, 0.973);
+  }
+  
+ 

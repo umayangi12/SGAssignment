@@ -36,7 +36,7 @@ export default class HomeUser extends Component {
   filterData(posts, searchKey) {
     const result = posts.filter(
       (post) =>
-        post.id.toLowerCase().includes(searchKey) ||
+        post.uid.toLowerCase().includes(searchKey) ||
         post.fname.toLowerCase().includes(searchKey) ||
         post.lname.toLowerCase().includes(searchKey) ||
         post.email.toLowerCase().includes(searchKey)
@@ -96,7 +96,7 @@ export default class HomeUser extends Component {
             {this.state.posts.map((posts, index) => (
               <tr>
                 <th scope="row">{index + 1}</th>
-                <td> {posts.id}</td>
+                <td> {posts.uid}</td>
                 <td>{posts.fname}</td>
                 <td>{posts.lname}</td>
                 <td>{posts.email}</td>
@@ -108,7 +108,7 @@ export default class HomeUser extends Component {
                 <td>
                   <a
                     className="btn btn-warning text-dark"
-                    href={`/#/${posts._id}`}
+                    href={`/EU/${posts._id}`}
                   >
                     <i className="fas fa-edit"></i>&nbsp; Edit
                   </a>

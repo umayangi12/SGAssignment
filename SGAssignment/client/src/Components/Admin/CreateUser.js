@@ -50,6 +50,7 @@ export default class CreateUser extends Component {
       lname.length === 0 ||
       email.length === 0 ||
       dob.length === 0 ||
+      mobile.length === 0 ||
       status.length === 0 ||
       password.length === 0 ||
       accType.length === 0
@@ -198,6 +199,17 @@ export default class CreateUser extends Component {
                     onChange={this.handleInputChange}
                   />
                 </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Account Type</lable>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="accType"
+                    placeholder="Add a account type"
+                    value={this.state.accType}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
               </form>
               <br></br>
               <center>
@@ -210,8 +222,8 @@ export default class CreateUser extends Component {
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
-                <br/>
-                <a href="/HSN"> Details</a>
+                <br />
+                <a href="/HU"> Details</a>
               </center>
             </div>
           </div>

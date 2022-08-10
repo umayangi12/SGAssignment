@@ -227,6 +227,17 @@ export default class EditUser extends Component {
                     onChange={this.handleInputChange}
                   />
                 </div>
+                <div className="form-group" style={{ marginBottom: "15px" }}>
+                  <lable style={{ marginBottom: "5px" }}>Account Type</lable>
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="accType"
+                    placeholder="Add a account type"
+                    value={this.state.accType}
+                    onChange={this.handleInputChange}
+                  />
+                </div>
               </form>
               <br></br>
               <center>

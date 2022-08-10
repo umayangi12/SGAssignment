@@ -26,6 +26,7 @@ import HomeStuentNotes from './Components/Student/HomeStudentNotes';
 import StudentNotesDetails from './Components/Student/StudentNotesDetails';
 import CreateUser from './Components/Admin/CreateUser';
 import HomeUser from './Components/Admin/HomeUser';
+import EditUser from './Components/Admin/EditUser';
 function App() {
   // Check for token to keep user logged in
   if (localStorage.jwtToken) {
@@ -72,6 +73,7 @@ function App() {
 
           <Route path = "/CU" component={CreateUser}></Route>
           <Route path = "/HU" component={HomeUser}></Route>
+          <Route path = "/EU" component={EditUser}></Route>
     
     
 

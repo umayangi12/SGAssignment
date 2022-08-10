@@ -1,9 +1,7 @@
-import Axios from "axios";
 import React, { Component } from "react";
-import "./Allcss.css";
-import swal from "@sweetalert/with-react";
+import axios from "axios";
 
-export default class CreateUser extends Component {
+export default class EditUser extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,7 +16,7 @@ export default class CreateUser extends Component {
       accType: "",
     };
   }
-
+  
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -30,7 +28,10 @@ export default class CreateUser extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { uid, fname, lname, email, dob, mobile, status, password, accType} = this.state;
+    const id = this.props.match.params.id;
+    const { uid, fname, lname, email, dob, mobile, status, password, accType } =
+      this.state;
+
     const data = {
       uid: uid,
       fname: fname,
@@ -42,73 +43,101 @@ export default class CreateUser extends Component {
       password: password,
       accType: accType,
     };
-    console.log(data);
 
-    if (
-      uid.length === 0 ||
-      fname.length === 0 ||
-      lname.length === 0 ||
-      email.length === 0 ||
-      dob.length === 0 ||
-      status.length === 0 ||
-      password.length === 0 ||
-      accType.length === 0
-    ) {
-      swal("Please fill all the details");
-    } else {
-      Axios.post("/cuser/save", data).then((res) => {
-        let path = "/CU";
-        if (res.data.success) {
-          alert("User Saved Successfully");
-          this.props.history.push(path);
-          this.setState({
-            uid: "",
-            fname: "",
-            lname: "",
-            email: "",
-            dob: "",
-            mobile: "",
-            status: "",
-            password: "",
-            accType: "",
-          });
-        }
-      });
-    }
+    // console.log(data)
+
+    // const SenderContact = /^[0-9\b]+$/;
+    // const ReceiverContact = /^[0-9\b]+$/;
+    // const ReceiverEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    // const SenderEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    // if ((!SenderContact.test(String(senderContact))) || (senderContact.length != 10)) {
+    //     swal("Invalid Contact Number !", "contact number should be valid pattern", "error");
+    // } else if ((!ReceiverContact.test(String(receiverContact))) || (receiverContact.length != 10)) {
+    //     swal("Invalid Contact Number !", "contact number should be valid pattern", "error");
+    // } else if ((!ReceiverEmail.test(String(receiverEmail)))) {
+    //     swal("Invalid email address !", "Please enter valid email address", "error");
+    // } else if ((!SenderEmail.test(String(senderEmail)))) {
+    //     swal("Invalid email address !", "Please enter valid email address", "error");
+    // } else if (serialNumber.length === 0 || receiverName.length === 0 || receiverContact.length === 0 ||
+    //     receiverEmail.length === 0 || receiverAddress.length === 0 || senderName.length === 0 || senderContact.length === 0 ||
+    //     senderEmail.length === 0 || senderAddress.length === 0 || pNo.length === 0 || pType.length === 0 || pWeight.length === 0 || pShippingCost.length === 0) {
+    //     swal("Please fill all the details")
+    // }else {
+
+    axios.put(`/cuser/update/${id}`, data).then((res) => {
+      let path = "/HU";
+      if (res.data.success) {
+        alert("Data Updated Successfully");
+        this.props.history.push(path);
+        this.setState({
+          uid: "",
+          fname: "",
+          lname: "",
+          email: "",
+          dob: "",
+          mobile: "",
+          status: "",
+          password: "",
+          accType: "",
+        });
+      }
+    });
   };
+
+  componentDidMount() {
+    const id = this.props.match.params.id;
+
+    axios.get(`/cuser/${id}`).then((res) => {
+      if (res.data.success) {
+        this.setState({
+          uid: res.data.post.uid,
+          fname: res.data.post.fname,
+          lname: res.data.post.lanme,
+          email: res.data.post.email,
+          dob: res.data.post.dob,
+          mobile: res.data.post.mobile,
+          status: res.data.post.status,
+          password: res.data.post.password,
+          accType: res.data.post.accType,
+        });
+        console.log(this.state.post);
+      }
+    });
+  }
+
   render() {
     return (
       <div>
-        <nav class="navbar navbar-expand-lg nav" style={{ marginTop: "5%" }}>
-          <div class="container-fluid">
-            <div class="collapse navbar-collapse" id="navbarNav">
-              <ul class="navbar-nav ">
-                <li class="nav-item">
-                  <div>
-                    <button className="btn btn-success">
-                      <a
-                        href="/dashboard"
-                        style={{ textDecoration: "none", color: "white" }}
-                      >
-                        Dashboad
-                      </a>
-                    </button>
-                  </div>
-                </li>
-              </ul>
-            </div>
+        <nav class="navbar b">
+          <div class="container">
+            <form class="d-flex nav1 " role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+                onChange={this.handleSearchArea}
+              ></input>
+              &nbsp;
+              <button class="btn btn-outline-warning " type="submit">
+                Search
+              </button>
+            </form>
+            <a class="navbar-brand" href="#"></a>
           </div>
         </nav>
-        <div className="card2" style={{ marginLeft: "15%" }}>
+        <div className="card2">
           <div className="card" style={{ width: "65rem" }}>
             <div class="card-body">
               <form>
                 <br />
                 <center>
-                  <h1 className="anm">Create User</h1>
+                  <h1 className="anm"> Edit Users</h1>
                 </center>
                 <br />
                 <br />
+
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <lable style={{ marginBottom: "5px" }}>ID number</lable>
                   <input
@@ -208,10 +237,8 @@ export default class CreateUser extends Component {
                   onClick={this.onSubmit}
                 >
                   <i className="far fa-check-square"></i>
-                  &nbsp; Save
+                  &nbsp; Update
                 </a>
-                <br/>
-                <a href="/HSN"> Details</a>
               </center>
             </div>
           </div>

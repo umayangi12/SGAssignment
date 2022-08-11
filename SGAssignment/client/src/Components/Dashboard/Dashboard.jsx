@@ -53,7 +53,7 @@ toggleIsShown = () => this.setState(({isShown}) => ({ isShown: !isShown}));
             </div>
           </nav>
           <div className='mern'>
-          <div className='row' style={{marginTop: '6%', marginBottom: '8%', marginLeft:'8%'}}>
+          <div className='row' style={{marginTop: '6%', marginBottom: '8%', marginLeft:'37%'}}>
 
           <div className='col'>
               <div class="card" style={{ width: '18rem' }}>

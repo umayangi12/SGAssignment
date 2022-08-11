@@ -34,6 +34,9 @@ class Dashboard1 extends Component {
                   <li class="nav-item">
                     <button className="btn btn-success"><a href="/CSN" style={{ textDecoration: 'none', color: 'white' }}>Add Student Notes</a> </button>
                   </li>
+                  <li class="nav-item">
+                    <button className="btn btn-success"><a href="/HU" style={{ textDecoration: 'none', color: 'white' }}>See my Temporary password and email</a> </button>
+                  </li>
 
                 </ul>
               </div>

@@ -177,16 +177,22 @@ export default class CreateUser extends Component {
                   />
                 </div>
 
-                <div className="form-group" style={{ marginBottom: "15px" }}>
+                <div
+                  className="form-group col-md-6"
+                  style={{ marginBottom: "15px", marginLeft: "-1.5%" }}
+                >
                   <lable style={{ marginBottom: "5px" }}>Status</lable>
-                  <input
-                    type="boolean"
-                    className="form-control"
+                  <select
                     name="status"
-                    placeholder="Enter Status"
-                    value={this.state.status}
                     onChange={this.handleInputChange}
-                  />
+                    value={this.state.Flanguage}
+                    defaultValue="select type"
+                    className="form-control"
+                  >
+                    <option defaultValue>Select Status</option>
+                    <option>Approved</option>
+                    <option>Rejected</option>
+                  </select>
                 </div>
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <lable style={{ marginBottom: "5px" }}>Password</lable>
@@ -199,16 +205,22 @@ export default class CreateUser extends Component {
                     onChange={this.handleInputChange}
                   />
                 </div>
-                <div className="form-group" style={{ marginBottom: "15px" }}>
+                <div
+                  className="form-group col-md-6"
+                  style={{ marginBottom: "15px", marginLeft: "-1.5%" }}
+                >
                   <lable style={{ marginBottom: "5px" }}>Account Type</lable>
-                  <input
-                    type="text"
-                    className="form-control"
+                  <select
                     name="accType"
-                    placeholder="Add a account type"
-                    value={this.state.accType}
                     onChange={this.handleInputChange}
-                  />
+                    value={this.state.Flanguage}
+                    defaultValue="select type"
+                    className="form-control"
+                  >
+                    <option defaultValue>Select Account Type</option>
+                    <option>Admin</option>
+                    <option>Student</option>
+                  </select>
                 </div>
               </form>
               <br></br>

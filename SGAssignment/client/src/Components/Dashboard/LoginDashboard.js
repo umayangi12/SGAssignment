@@ -5,7 +5,7 @@ class LoginDashboard extends Component {
   render() {
     return (
       <div className='logindash'>
-      <div className='row' style={{marginTop: '6%', marginBottom: '8%', marginLeft:'3%'}}>
+      <div className='row' style={{marginTop: '6%', marginBottom: '8%', marginLeft:'15%'}}>
           <div className='col'>
               <div class="card" style={{width: '18rem' }}>
                   <img src="./AdminSign.jpg" class="card-img-top" alt="..." />

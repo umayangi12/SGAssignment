@@ -3,8 +3,7 @@ const StudentNotes = require('../../models/StudentNotes');
 
 const router = express.Router();
 
-//save posts
-
+//save notes
 router.post('/stdnotes/save',(req,res)=>{
 
     let newPost = new StudentNotes(req.body);   
@@ -23,7 +22,7 @@ router.post('/stdnotes/save',(req,res)=>{
 });
 
 
-//get posts
+//get notes
 router.get('/stdnotes',(req,res) =>{
     StudentNotes.find().exec((err,posts) =>{
         if(err){
@@ -39,7 +38,7 @@ router.get('/stdnotes',(req,res) =>{
 });
 
 
-//get a specific post
+//get a specific note
 router.get("/stdnotes/:id",(req,res) =>{
 
     let postId = req.params.id;
@@ -59,7 +58,7 @@ router.get("/stdnotes/:id",(req,res) =>{
 });
 
 
-//update posts
+//update notes
 router.put('/stdnotes/update/:id',(req,res)=>{
     StudentNotes.findByIdAndUpdate(
         req.params.id,
@@ -78,7 +77,7 @@ router.put('/stdnotes/update/:id',(req,res)=>{
     );
 });
 
-//delete post
+//delete notes
 router.delete('/stdnotes/delete/:id',(req,res) =>{
     StudentNotes.findByIdAndRemove(req.params.id).exec((err,deletedpost) =>{
         if(err) return res.status(400).json({

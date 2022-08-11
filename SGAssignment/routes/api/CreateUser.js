@@ -3,8 +3,7 @@ const CUser = require("../../models/CreateUser");
 
 const router = express.Router();
 
-//save posts
-
+//save user
 router.post("/cuser/save", (req, res) => {
   let newPost = new CUser(req.body);
 
@@ -21,7 +20,7 @@ router.post("/cuser/save", (req, res) => {
   });
 });
 
-//get posts
+//get user
 router.get("/cuser", (req, res) => {
   CUser.find().exec((err, posts) => {
     if (err) {
@@ -36,7 +35,7 @@ router.get("/cuser", (req, res) => {
   });
 });
 
-//get a specific post
+//get a specific user
 router.get("/cuser/:id", (req, res) => {
   let postId = req.params.id;
 
@@ -52,7 +51,7 @@ router.get("/cuser/:id", (req, res) => {
   });
 });
 
-//update posts
+//update user
 router.put("/cuser/update/:id", (req, res) => {
   CUser.findByIdAndUpdate(
     req.params.id,
@@ -70,7 +69,7 @@ router.put("/cuser/update/:id", (req, res) => {
   );
 });
 
-//delete post
+//delete user
 router.delete("/cuser/delete/:id", (req, res) => {
   CUser.findByIdAndRemove(req.params.id).exec((err, deletedpost) => {
     if (err)

@@ -10,7 +10,7 @@ class LoginDashboard extends Component {
               <div class="card" style={{width: '18rem' }}>
                   <img src="./AdminSign.jpg" class="card-img-top" alt="..." />
                   <div class="card-body">
-                      <h5 class="card-title">System Admin</h5>
+                      <h5 class="card-title">Admin</h5>
                       <br/><br/>
                       <a href="/login" class="btn btn-primary">Login</a>&nbsp;
                       <a href="/register" class="btn btn-success">SignUp</a>

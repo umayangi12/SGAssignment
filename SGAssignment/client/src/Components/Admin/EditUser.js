@@ -47,7 +47,7 @@ export default class EditThesisEvaluation extends Component {
     axios.put(`/cuser/update/${id}`, data).then((res) => {
       let path = "/HU";
       if (res.data.success) {
-        alert("Data Updated Successfully");
+        alert("User Updated Successfully");
         this.props.history.push(path);
         this.setState({
           uid: "",

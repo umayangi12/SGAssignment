@@ -236,6 +236,8 @@ export default class CreateUser extends Component {
                   &nbsp; Save
                 </a>
                 <br />
+                <br />
+               
                 <a className="btn btn-warning text-dark" href="/HU">
                   {" "}
                   Details

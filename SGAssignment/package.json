@@ -15,6 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
+    "@emailjs/browser": "^3.6.2",
     "@sweetalert/with-react": "^0.1.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",

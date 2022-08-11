@@ -39,7 +39,7 @@ export default class StudentNotes extends Component {
         Axios.post("/stdnotes/save", data).then((res) => {
             let path = "/CSN";
             if (res.data.success) {
-                alert("Request Sent Successfully")
+                alert("Note saved Successfully")
                 this.props.history.push(path);
                 this.setState(
                     {
@@ -133,9 +133,10 @@ export default class StudentNotes extends Component {
                       &nbsp; Save
                     </a>
                     <li>
-                      <br>
-                      </br>
-                      <a  href="/HSN"> Details
+                      <br></br>
+                      <a className="btn btn-warning text-dark" href="/HSN">
+                        {" "}
+                        Details
                       </a>
                     </li>
                   </center>

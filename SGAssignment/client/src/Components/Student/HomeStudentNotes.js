@@ -113,7 +113,7 @@ export default class HomeStuentNotes extends Component {
         <center>
           <button className="btn btn-success">
             <a href="/CSN" style={{ textDecoration: "none", color: "white" }}>
-              Add Student Notes{" "}
+              Add My Notes{" "}
             </a>{" "}
           </button>
         </center>

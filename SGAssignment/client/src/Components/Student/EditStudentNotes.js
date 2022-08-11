@@ -29,31 +29,10 @@ export default class EditStudentNotes extends Component {
       description: description,
     };
 
-    // console.log(data)
-
-    // const SenderContact = /^[0-9\b]+$/;
-    // const ReceiverContact = /^[0-9\b]+$/;
-    // const ReceiverEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    // const SenderEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-    // if ((!SenderContact.test(String(senderContact))) || (senderContact.length != 10)) {
-    //     swal("Invalid Contact Number !", "contact number should be valid pattern", "error");
-    // } else if ((!ReceiverContact.test(String(receiverContact))) || (receiverContact.length != 10)) {
-    //     swal("Invalid Contact Number !", "contact number should be valid pattern", "error");
-    // } else if ((!ReceiverEmail.test(String(receiverEmail)))) {
-    //     swal("Invalid email address !", "Please enter valid email address", "error");
-    // } else if ((!SenderEmail.test(String(senderEmail)))) {
-    //     swal("Invalid email address !", "Please enter valid email address", "error");
-    // } else if (serialNumber.length === 0 || receiverName.length === 0 || receiverContact.length === 0 ||
-    //     receiverEmail.length === 0 || receiverAddress.length === 0 || senderName.length === 0 || senderContact.length === 0 ||
-    //     senderEmail.length === 0 || senderAddress.length === 0 || pNo.length === 0 || pType.length === 0 || pWeight.length === 0 || pShippingCost.length === 0) {
-    //     swal("Please fill all the details")
-    // }else {
-
     axios.put(`/stdnotes/update/${id}`, data).then((res) => {
       let path = "/HSN";
       if (res.data.success) {
-        alert("Data Updated Successfully");
+        alert("Note Updated Successfully");
         this.props.history.push(path);
         this.setState({
           title: "",

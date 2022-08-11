@@ -18,6 +18,7 @@ export default class CreateUser extends Component {
       accType: "",
     };
   }
+ 
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -235,7 +236,10 @@ export default class CreateUser extends Component {
                   &nbsp; Save
                 </a>
                 <br />
-                <a href="/HU"> Details</a>
+                <a className="btn btn-warning text-dark" href="/HU">
+                  {" "}
+                  Details
+                </a>
               </center>
             </div>
           </div>

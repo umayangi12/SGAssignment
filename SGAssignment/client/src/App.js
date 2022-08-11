@@ -67,13 +67,13 @@ function App() {
        
         
           <Route path = "/CSN" component = {StudentNotes}></Route>
-          <Route path = "/USN" component={EditStudentNotes}></Route>
+          <Route path = "/USN/:id" component={EditStudentNotes}></Route>
           <Route path = "/HSN" component={HomeStuentNotes}></Route>
           <Route path = "/SND" component={StudentNotesDetails}></Route>
 
           <Route path = "/CU" component={CreateUser}></Route>
           <Route path = "/HU" component={HomeUser}></Route>
-          <Route path = "/EU" component={EditUser}></Route>
+          <Route path = "/EU/:id" component={EditUser}></Route>
 
     
     

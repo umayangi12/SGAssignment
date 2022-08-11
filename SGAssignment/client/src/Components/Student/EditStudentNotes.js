@@ -34,13 +34,15 @@ export default class EditStudentNotes extends Component {
       if (res.data.success) {
         alert("Note Updated Successfully");
         this.props.history.push(path);
-        this.setState({
+        this.setState(
+          {
           title: "",
           description: "",
-        });
+        }
+        )
       }
-    });
-  };
+    })
+  }
 
   componentDidMount() {
     const id = this.props.match.params.id;
@@ -51,6 +53,7 @@ export default class EditStudentNotes extends Component {
           title: res.data.post.title,
           description: res.data.post.description,
         });
+
         console.log(this.state.post);
       }
     });

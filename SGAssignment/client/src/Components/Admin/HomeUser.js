@@ -78,6 +78,8 @@ export default class HomeUser extends Component {
             <a class="navbar-brand" href="#"></a>
           </div>
         </nav>
+        <br />
+        <br />
 
         <table class="table">
           <thead>
@@ -124,8 +126,8 @@ export default class HomeUser extends Component {
                     <i className="far fa-trash-alt"></i>&nbsp;Delete
                   </a>
                   &nbsp; &nbsp;
-                  <a className="btn btn-danger text-dark " href="/sendmail">
-                    <i className="far fa-trash-alt"></i>&nbsp;Send Mail
+                  <a className="btn btn-primary text-dark " href="/sendmail">
+                    <i className="fas fa-envelope"></i>&nbsp;Send Mail
                   </a>
                 </td>
               </tr>

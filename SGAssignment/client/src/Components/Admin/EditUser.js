@@ -196,7 +196,7 @@ export default class EditThesisEvaluation extends Component {
                 <select
                   name="status"
                   onChange={this.handleInputChange}
-                  value={this.state.Flanguage}
+                  value={this.state.status}
                   defaultValue="select type"
                   className="form-control"
                 >
@@ -224,7 +224,7 @@ export default class EditThesisEvaluation extends Component {
                 <select
                   name="accType"
                   onChange={this.handleInputChange}
-                  value={this.state.Flanguage}
+                  value={this.state.accType}
                   defaultValue="select type"
                   className="form-control"
                 >

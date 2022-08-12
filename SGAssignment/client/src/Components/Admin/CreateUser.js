@@ -45,7 +45,27 @@ export default class CreateUser extends Component {
     };
     console.log(data);
 
-    if (
+    //email validation
+    const uemail =
+      /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+    //phone number validation
+    const ph = /^[0-9\b]+$/;
+    if (!ph.test(String(mobile)) || mobile.length != 10) {
+      swal(
+        "Invalid Contact Number !",
+        "contact number should be valid pattern",
+        "error"
+      );
+    } else if (!uemail.test(String(email))) {
+      swal(
+        "Invalid email address !",
+        "Please enter valid email address",
+        "error"
+      );
+
+      //empty field validation
+    } else if (
       uid.length === 0 ||
       fname.length === 0 ||
       lname.length === 0 ||

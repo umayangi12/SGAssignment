@@ -63,7 +63,7 @@ class Dashboard extends Component {
                   <li class="nav-item">
                     <button className="btn btn-success">
                       <a
-                        href="/"
+                        href="/sendmail"
                         style={{ textDecoration: "none", color: "white" }}
                       >
                         Send Email
@@ -114,7 +114,7 @@ class Dashboard extends Component {
                   <div class="card-body">
                     <h5 class="card-title">Send Emails</h5>
                     <p>Send temporary email and password for the users</p>
-                    <a href="/" class="btn btn-primary">
+                    <a href="/sendmail" class="btn btn-primary">
                       Click Here
                     </a>
                     &nbsp;

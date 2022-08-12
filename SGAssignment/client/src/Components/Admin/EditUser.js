@@ -78,7 +78,7 @@ export default class EditThesisEvaluation extends Component {
           mobile: res.data.post.mobile,
           status: res.data.post.status,
           password: res.data.post.password,
-          accType: res.data.post.accType
+          accType: res.data.post.accType,
         });
         console.log(this.state.post);
       }

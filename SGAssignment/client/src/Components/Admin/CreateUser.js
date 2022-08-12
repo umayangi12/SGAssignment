@@ -18,7 +18,6 @@ export default class CreateUser extends Component {
       accType: "",
     };
   }
- 
 
   handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -31,7 +30,8 @@ export default class CreateUser extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const { uid, fname, lname, email, dob, mobile, status, password, accType} = this.state;
+    const { uid, fname, lname, email, dob, mobile, status, password, accType } =
+      this.state;
     const data = {
       uid: uid,
       fname: fname,
@@ -58,7 +58,7 @@ export default class CreateUser extends Component {
     ) {
       swal("Please fill all the details");
     } else {
-      Axios.post("/cuser/save", data).then((res) => { 
+      Axios.post("/cuser/save", data).then((res) => {
         let path = "/CU";
         if (res.data.success) {
           alert("User Saved Successfully");
@@ -235,7 +235,6 @@ export default class CreateUser extends Component {
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
-                
               </center>
             </div>
           </div>

@@ -123,6 +123,10 @@ export default class HomeUser extends Component {
                   >
                     <i className="far fa-trash-alt"></i>&nbsp;Delete
                   </a>
+                  &nbsp; &nbsp;
+                  <a className="btn btn-danger text-dark " href="/sendmail">
+                    <i className="far fa-trash-alt"></i>&nbsp;Send Mail
+                  </a>
                 </td>
               </tr>
             ))}

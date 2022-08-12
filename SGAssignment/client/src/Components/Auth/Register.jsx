@@ -1,54 +1,54 @@
-import React, { Component } from 'react';
-import './Auth.css';
-import { Link, withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { registerUser1 } from '../../redux/actions/authActions';
-import classnames from 'classnames';
+import React, { Component } from "react";
+import "./Auth.css";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { registerUser1 } from "../../redux/actions/authActions";
+import classnames from "classnames";
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      name: '',
-      email: '',
-      password: '',
-      password2: '',
-      role:'',
-      errors: {}
+      name: "",
+      email: "",
+      password: "",
+      password2: "",
+      role: "",
+      errors: {},
     };
   }
   componentDidMount() {
     // If logged in and user navigates to Register page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/register');
+      this.props.history.push("/register");
     }
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
 
-  onChangeRegister = e => {
+  onChangeRegister = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  registerSubmit = e => {
+  registerSubmit = (e) => {
     e.preventDefault();
     const newUser = {
       name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
-      role: this.state.role
+      role: this.state.role,
     };
     this.props.registerUser1(newUser, this.props.history);
   };
 
   render() {
-    const { errors, name, password, password2, email, role} = this.state;
+    const { errors, name, password, password2, email, role } = this.state;
     return (
       <div>
         <section className="register">
@@ -56,34 +56,39 @@ class Register extends Component {
             <div className="row">
               <div className="col-lg-6">
                 <div className="signup-left">
-                <h4 className="text-capitalize">
-                  SignUp with your credentials to enjoy the Application services
-                </h4>
+                  <h4 className="text-capitalize">
+                    SignUp with your credentials to enjoy the Application
+                    services
+                  </h4>
                 </div>
               </div>
               <div className="col-lg-6">
                 <div className="signup-right">
                   <h1>Signup</h1>
                   <form noValidate onSubmit={this.registerSubmit}>
-                  <div className="form-row">
-             <div className="form-group col-md-12" >
-             <label htmlFor="name">User Category</label> <br />
-                 <select id="role" onChange={this.onChangeRegister}  value={role} 
-                   error={errors.role}
-                   classname={classnames('', {
-                     invalid: errors.role
-                   })} 
-                   type="text"
-                className="form-control">
-                   <br />
-                        <span className="text-danger">{errors.role}</span>
-                 <option defaultValue>Select User Category</option>
-                 <option>Admin</option>
-                 <option>Student</option>
-                 </select>
-                 </div>
-                 </div> 
-                 
+                    <div className="form-row">
+                      <div className="form-group col-md-12">
+                        <label htmlFor="name">User Category</label> <br />
+                        <select
+                          id="role"
+                          onChange={this.onChangeRegister}
+                          value={role}
+                          error={errors.role}
+                          classname={classnames("", {
+                            invalid: errors.role,
+                          })}
+                          type="text"
+                          className="form-control"
+                        >
+                          <br />
+                          <span className="text-danger">{errors.role}</span>
+                          <option defaultValue>Select User Category</option>
+                          <option>Admin</option>
+                          <option>Student</option>
+                        </select>
+                      </div>
+                    </div>
+
                     <div class="form-row">
                       <div class="form-group col-md-12">
                         <label htmlFor="name">Full Name</label> <br />
@@ -95,10 +100,10 @@ class Register extends Component {
                           value={name}
                           onChange={this.onChangeRegister}
                           error={errors.name}
-                          classname={classnames('', {
-                            invalid: errors.name
+                          classname={classnames("", {
+                            invalid: errors.name,
                           })}
-                        />{' '}
+                        />{" "}
                         <br />
                         <span className="text-danger">{errors.name}</span>
                       </div>
@@ -114,10 +119,10 @@ class Register extends Component {
                           value={email}
                           onChange={this.onChangeRegister}
                           error={errors.email}
-                          classname={classnames('', {
-                            invalid: errors.email
+                          classname={classnames("", {
+                            invalid: errors.email,
                           })}
-                        />{' '}
+                        />{" "}
                         <br />
                         <span className="text-danger">{errors.email}</span>
                       </div>
@@ -133,17 +138,19 @@ class Register extends Component {
                           value={password}
                           onChange={this.onChangeRegister}
                           error={errors.password}
-                          classname={classnames('', {
-                            invalid: errors.password
+                          classname={classnames("", {
+                            invalid: errors.password,
                           })}
-                        />{' '}
+                        />{" "}
                         <br />
                         <span className="text-danger">{errors.password}</span>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-12">
-                        <label htmlFor="Confirm Password">Confirm Password</label>
+                        <label htmlFor="Confirm Password">
+                          Confirm Password
+                        </label>
                         <br />
                         <input
                           type="password"
@@ -153,17 +160,20 @@ class Register extends Component {
                           value={password2}
                           onChange={this.onChangeRegister}
                           error={errors.password2}
-                          classname={classnames('', {
-                            invalid: errors.password2
+                          classname={classnames("", {
+                            invalid: errors.password2,
                           })}
-                        />{' '}
+                        />{" "}
                         <br />
                         <span className="text-danger">{errors.password2}</span>
                       </div>
                     </div>
                     <div class="form-row">
                       <div class="form-group col-md-12">
-                        <button type="submit" className="btn btn-md btn-register">
+                        <button
+                          type="submit"
+                          className="btn btn-md btn-register"
+                        >
                           Signup
                         </button>
                       </div>
@@ -191,10 +201,12 @@ class Register extends Component {
 Register.propTypes = {
   registerUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
-export default connect(mapStateToProps, { registerUser1 })(withRouter(Register));
+export default connect(mapStateToProps, { registerUser1 })(
+  withRouter(Register)
+);

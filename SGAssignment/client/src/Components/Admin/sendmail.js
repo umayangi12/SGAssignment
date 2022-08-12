@@ -8,7 +8,6 @@ export default class sendmail extends Component {
           <div className="card" style={{ width: "65rem" }}>
             <div class="card-body">
               <form action="/send_email" method="post">
-                
                 <div className="form-group" style={{ marginBottom: "15px" }}>
                   <lable style={{ marginBottom: "5px" }}>From</lable>
                   <input

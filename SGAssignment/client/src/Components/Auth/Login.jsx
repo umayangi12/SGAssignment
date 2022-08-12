@@ -1,47 +1,47 @@
-import React, { Component } from 'react';
-import './Auth.css';
-import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { loginUser1 } from '../../redux/actions/authActions';
-import classnames from 'classnames';
+import React, { Component } from "react";
+import "./Auth.css";
+import { Link } from "react-router-dom";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { loginUser1 } from "../../redux/actions/authActions";
+import classnames from "classnames";
 
 class Login extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: '',
-      password: '',
-      errors: {}
+      email: "",
+      password: "",
+      errors: {},
     };
   }
   componentDidMount() {
     // If logged in and user navigates to Login page, should redirect them to dashboard
     if (this.props.auth.isAuthenticated) {
-      this.props.history.push('/dashboard');
+      this.props.history.push("/dashboard");
     }
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.auth.isAuthenticated) {
-       alert("Login Successfully");
-      this.props.history.push('/dashboard'); // push user to dashboard when they login
+      alert("Login Successfully");
+      this.props.history.push("/dashboard"); // push user to dashboard when they login
     }
     if (nextProps.errors) {
       this.setState({
-        errors: nextProps.errors
+        errors: nextProps.errors,
       });
     }
   }
 
-  onChangeLogin = e => {
+  onChangeLogin = (e) => {
     this.setState({ [e.target.id]: e.target.value });
   };
-  loginSubmit = e => {
+  loginSubmit = (e) => {
     e.preventDefault();
     const userData = {
       email: this.state.email,
-      password: this.state.password
+      password: this.state.password,
     };
     this.props.loginUser1(userData); // since we handle the redirect within our component, we don't need to pass in this.props.history as a parameter
   };
@@ -50,87 +50,92 @@ class Login extends Component {
     const { email, password, errors } = this.state;
     return (
       <div>
-      <section className="login c">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-6">
-              <div className="login-left">
-                <h4 className="text-capitalize">
-                  Login with your credentials to enjoy the Application services
-                </h4>
+        <section className="login c">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-6">
+                <div className="login-left">
+                  <h4 className="text-capitalize">
+                    Login with your credentials to enjoy the Application
+                    services
+                  </h4>
+                </div>
               </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="login-right">
-                <h1>Login</h1>
-                <form noValidate onSubmit={this.loginSubmit}>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <label htmlFor="Email">Email</label> <br />
-                      <input
-                        type="email"
-                        className="input-control"
-                        placeholder="Enter your email"
-                        id="email"
-                        value={email}
-                        onChange={this.onChangeLogin}
-                        error={errors.email}
-                        classname={classnames('', {
-                          invalid: errors.email || errors.emailNotFound
-                        })}
-                      />{' '}
-                      <br />
-                      <span className="text-danger">
-                        {errors.email}
-                        {errors.emailNotFound}
-                      </span>
+              <div className="col-lg-6">
+                <div className="login-right">
+                  <h1>Login</h1>
+                  <form noValidate onSubmit={this.loginSubmit}>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label htmlFor="Email">Email</label> <br />
+                        <input
+                          type="email"
+                          className="input-control"
+                          placeholder="Enter your email"
+                          id="email"
+                          value={email}
+                          onChange={this.onChangeLogin}
+                          error={errors.email}
+                          classname={classnames("", {
+                            invalid: errors.email || errors.emailNotFound,
+                          })}
+                        />{" "}
+                        <br />
+                        <span className="text-danger">
+                          {errors.email}
+                          {errors.emailNotFound}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <label htmlFor="Password">Password</label> <br />
-                      <input
-                        type="password"
-                        className="input-control"
-                        placeholder="Enter your password"
-                        id="password"
-                        value={password}
-                        onChange={this.onChangeLogin}
-                        error={errors.password}
-                        classname={classnames('', {
-                          invalid: errors.password || errors.passwordIncorrect
-                        })}
-                      />{' '}
-                      <br />
-                      <span className="text-danger">
-                        {errors.password}
-                        {errors.passwordIncorrect}
-                      </span>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label htmlFor="Password">Password</label> <br />
+                        <input
+                          type="password"
+                          className="input-control"
+                          placeholder="Enter your password"
+                          id="password"
+                          value={password}
+                          onChange={this.onChangeLogin}
+                          error={errors.password}
+                          classname={classnames("", {
+                            invalid:
+                              errors.password || errors.passwordIncorrect,
+                          })}
+                        />{" "}
+                        <br />
+                        <span className="text-danger">
+                          {errors.password}
+                          {errors.passwordIncorrect}
+                        </span>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <button type="submit" className="btn btn-md btn-register">
-                        Login
-                      </button>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <button
+                          type="submit"
+                          className="btn btn-md btn-register"
+                        >
+                          Login
+                        </button>
+                      </div>
                     </div>
-                  </div>
-                  <div class="form-row">
-                    <div class="form-group col-md-12">
-                      <p>
-                        Don't have an account ?
-                        <Link to="/register" className="text-success">
-                          Create one
-                        </Link>
-                      </p>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <p>
+                          Don't have an account ?
+                          <Link to="/register" className="text-success">
+                            Create one
+                          </Link>
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                </form>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     );
   }
@@ -139,10 +144,10 @@ class Login extends Component {
 Login.propTypes = {
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  errors: PropTypes.object.isRequired
+  errors: PropTypes.object.isRequired,
 };
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   auth: state.auth,
-  errors: state.errors
+  errors: state.errors,
 });
 export default connect(mapStateToProps, { loginUser1 })(Login);

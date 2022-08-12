@@ -1,106 +1,104 @@
 .hbody {
-  background-image: url("./uni.jpeg");
-    padding-top: 1%;
-    padding-bottom: 3%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-   }
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url("./univ.jpeg");
+  padding-top: 1%;
+  padding-bottom: 3%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 
-.imgstyle{
-    position: center;
-    margin-left: 5%;
-    margin-top: 8%;
-
-
+.imgstyle {
+  position: center;
+  margin-left: 5%;
+  margin-top: 8%;
 }
 .gfg {
-    margin: -1%;
-    position: relative;
+  margin: -1%;
+  position: relative;
 }
 
 .first-txt {
-    position: absolute;
-    color:white;
-    font-size: 25px;
-    top: 150px;
-    margin-left: 10%;
+  position: absolute;
+  color: white;
+  font-size: 25px;
+  top: 150px;
+  margin-left: 10%;
 }
 
-.second-txt{
- 
-    bottom: 160px;
-    margin-left: 10%;
-    margin-top: -16%;
-    color: white;
-    font-size: 18px;
-    
+.second-txt {
+  bottom: 160px;
+  margin-left: 10%;
+  margin-top: -16%;
+  color: white;
+  font-size: 18px;
 }
-  .h4-style{
-    font-family: Arial, Helvetica, sans-serif;
-    font-style:oblique;
-    font-weight:bolder;
-  }
- 
-  .hcard3 {
-    box-shadow: 0 4px 8px 0 rgba(26, 26, 119, 0.696);
-    transition: 0.3s;
-    width: 20%;
-    height: 30%;
-    margin-left: 40%;
-    margin-top: 10%;
-    border-radius: 3%;
-    
-  }
-  .hcard3:hover {
-    box-shadow: 0 8px 16px 0 rgba(29, 18, 184, 0.756);
-  }
-  
-  .hcontainer3 {
-    padding: 6px 16px;
-  }
+.h4-style {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: oblique;
+  font-weight: bolder;
+}
 
-  .btnbtn{
-    display: inline-block;
-    border-radius: 4px;
-    background-color:rgba(14, 7, 92, 0.796);
-    border: none;
-    color: #FFFFFF;
-    text-align:justify;
-    font-size: 18px;
-    padding: 15px;
-    width: 200px;
-    transition: all 0.5s;
-    cursor: pointer;
-    margin: 5px;
-  }
-  
-  .btnbtn span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-  }
-  
-  .btnbtn span:after {
-    content: '\00bb';
-    position: absolute;
-    opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
-  }
-  
-  .btnbtn:hover span {
-    padding-right: 25px;
-  }
-  
-  .btnbtn:hover span:after {
-    opacity: 1;
-    right: 0;
-  }
-  .ch-color{
-    color: rgba(250, 15, 15, 0.973);
-  }
-  
- 
+.hcontainer3 {
+  padding: 6px 16px;
+}
+
+.btnbtn {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: rgba(14, 7, 92, 0.796);
+  border: none;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  padding: 15px 0;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 20px 10px;
+  margin-top: 60%;
+  margin-left: 350%;
+  margin-right: 40%;
+}
+
+.btnbtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.btnbtn span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -10px;
+  transition: 0.5s;
+}
+
+.btnbtn:hover span {
+  padding-right: 25px;
+}
+
+.btnbtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.ch-color {
+  color: rgba(250, 15, 15, 0.973);
+}
+
+.centerText {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: #fff;
+}
+
+.centerText h1 {
+  font-size: 60px;
+  margin-top: 80px;
+}

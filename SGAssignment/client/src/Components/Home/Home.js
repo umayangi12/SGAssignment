@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import './Home.css';
+import React, { Component } from "react";
+import "./Home.css";
 
 export default class Home extends Component {
   render() {
@@ -7,42 +7,43 @@ export default class Home extends Component {
       <div>
         <div class="hbody">
           <div class="gfg">
-            <div class="col">
-              <div class="hcard3 card bg-light mb-3">
-                <div class="hcontainer3">
-                  <i class="fas">
-                    <br />
-                    <br /> <br />
-                  </i>
+            <div class="row">
+              <div class="hcontainer3">
+                <i class="fas">
                   <br />
-                  <center>
-                    <button class="btnbtn">
-                      <span>
-                        <a
-                          href="/login"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          Admin Login
-                        </a>
-                      </span>
-                    </button>
-                    <br />
-                    <br />
-                    <button class="btnbtn">
-                      <span>
-                        <a
-                          href="/login1"
-                          style={{ textDecoration: "none", color: "white" }}
-                        >
-                          Student Login
-                        </a>
-                      </span>
-                    </button>
-                  </center>
+                  <br /> <br />
+                </i>
+                <br />
+                <center>
+                  <div className="centerText">
+                    <h1>UNIVERSITY MANAGEMENT SYSTEM</h1>
+                  </div>
+                  <button className="btnbtn">
+                    <span>
+                      <a
+                        href="/login"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Admin Login
+                      </a>
+                    </span>
+                  </button>
                   <br />
                   <br />
-                  <br />
-                </div>
+                  <button className="btnbtn">
+                    <span>
+                      <a
+                        href="/login1"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Student Login
+                      </a>
+                    </span>
+                  </button>
+                </center>
+                <br />
+                <br />
+                <br />
               </div>
             </div>
           </div>

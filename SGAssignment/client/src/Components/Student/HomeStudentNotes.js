@@ -25,8 +25,6 @@ export default class HomeStuentNotes extends Component {
     });
   }
 
-  
-
   onDelete = (id) => {
     axios.delete(`/stdnotes/delete/${id}`).then((res) => {
       alert("Delete Successfully");
@@ -73,8 +71,8 @@ export default class HomeStuentNotes extends Component {
             </form>
             <br />
             <br />
-            <br/>
-            
+            <br />
+
             <a class="navbar-brand" href="#"></a>
           </div>
         </nav>

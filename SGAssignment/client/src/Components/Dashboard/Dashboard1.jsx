@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
-import { logoutUser } from '../../redux/actions/authActions';
-import './Dashboard.css';
+import React, { Component } from "react";
+import PropTypes from "prop-types";
+import { connect } from "react-redux";
+import { logoutUser } from "../../redux/actions/authActions";
+import "./Dashboard.css";
 
 class Dashboard1 extends Component {
-  onLogoutClick = e => {
+  onLogoutClick = (e) => {
     e.preventDefault();
     this.props.logoutUser();
   };
@@ -57,8 +57,8 @@ class Dashboard1 extends Component {
                   <div class="card-body">
                     <h5 class="card-title">Student notes</h5>
                     <p>
-                      Add notes and summerize your work for pass the exams with better
-                      grades
+                      Add notes and summerize your work for pass the exams with
+                      better grades
                     </p>
                     <a href="/CSN" class="btn btn-primary">
                       Click Here
@@ -77,11 +77,11 @@ class Dashboard1 extends Component {
 
 Dashboard1.propTypes = {
   logoutUser: PropTypes.func.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
 };
 
-const mapStateToProps = state => ({
-  auth: state.auth
+const mapStateToProps = (state) => ({
+  auth: state.auth,
 });
 
 export default connect(mapStateToProps, { logoutUser })(Dashboard1);

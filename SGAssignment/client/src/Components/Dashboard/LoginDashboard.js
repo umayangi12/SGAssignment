@@ -30,9 +30,7 @@ class LoginDashboard extends Component {
                     
                   </div>
               </div>
-          </div>
-
-          
+          </div>          
       </div>
   </div>
     )

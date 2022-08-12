@@ -58,7 +58,7 @@ export default class CreateUser extends Component {
     ) {
       swal("Please fill all the details");
     } else {
-      Axios.post("/cuser/save", data).then((res) => {
+      Axios.post("/cuser/save", data).then((res) => { 
         let path = "/CU";
         if (res.data.success) {
           alert("User Saved Successfully");

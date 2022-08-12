@@ -27,8 +27,8 @@ class Dashboard extends Component {
           <center>
             <h1 className="backw1">Wellcome To Admin</h1>
           </center>
-          <img className="backw" src="./system.jpg" />
-          <img className="backwo" src="./system.jpg" />
+          <img className="backw" src="./admin.jpg" />
+          <img className="backwo" src="./admin.jpg" />
           <button
             style={{ marginLeft: "90%", marginTop: "-14%" }}
             onClick={this.onLogoutClick}
@@ -101,7 +101,6 @@ class Dashboard extends Component {
                   <div class="card-body">
                     <h5 class="card-title">All Details</h5>
                     <p>View all the details of the users in the system</p>
-                   
                     <a href="/HU" class="btn btn-primary">
                       Click Here
                     </a>
@@ -115,7 +114,6 @@ class Dashboard extends Component {
                   <div class="card-body">
                     <h5 class="card-title">Send Emails</h5>
                     <p>Send temporary email and password for the users</p>
-                    
                     <a href="/" class="btn btn-primary">
                       Click Here
                     </a>

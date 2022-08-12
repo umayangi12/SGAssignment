@@ -28,7 +28,7 @@ class LoginDashboard extends Component {
 
           <div className="col">
             <div class="card" style={{ width: "18rem" }}>
-              <img src="./StuSign.jpg" class="card-img-top" alt="..." />
+              <img src="./std.jpg" class="card-img-top" alt="..." />
               <div class="card-body">
                 <h5 class="card-title">Student</h5>
                 <br />

@@ -89,10 +89,10 @@ export default class CreateUser extends Component {
                   <div>
                     <button className="btn btn-success">
                       <a
-                        href="/dashboard"
+                        href="/HU"
                         style={{ textDecoration: "none", color: "white" }}
                       >
-                        Dashboad
+                        Details
                       </a>
                     </button>
                   </div>
@@ -235,13 +235,7 @@ export default class CreateUser extends Component {
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
-                <br />
-                <br />
-               
-                <a className="btn btn-warning text-dark" href="/HU">
-                  {" "}
-                  Details
-                </a>
+                
               </center>
             </div>
           </div>

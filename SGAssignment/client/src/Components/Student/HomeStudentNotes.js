@@ -71,6 +71,10 @@ export default class HomeStuentNotes extends Component {
                 Search
               </button>
             </form>
+            <br />
+            <br />
+            <br/>
+            
             <a class="navbar-brand" href="#"></a>
           </div>
         </nav>

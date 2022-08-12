@@ -69,10 +69,10 @@ export default class StudentNotes extends Component {
                       <div>
                         <button className="btn btn-success">
                           <a
-                            href="/dashboard1"
+                            href="/HSN"
                             style={{ textDecoration: "none", color: "white" }}
                           >
-                            Dashboad
+                            Details
                           </a>{" "}
                         </button>
                       </div>
@@ -132,13 +132,6 @@ export default class StudentNotes extends Component {
                       <i className="far fa-check-square"></i>
                       &nbsp; Save
                     </a>
-                    <li>
-                      <br></br>
-                      <a className="btn btn-warning text-dark" href="/HSN">
-                        {" "}
-                        Details
-                      </a>
-                    </li>
                   </center>
                 </div>
               </div>

@@ -13,49 +13,62 @@ class Dashboard1 extends Component {
   render() {
     const { user } = this.props.auth;
     return (
-
-      <div className=''>
+      <div>
         <div>
-        <button style={{marginLeft:'90%', marginTop:'2.5%'}}
+          <button
+            style={{ marginLeft: "90%", marginTop: "2.5%" }}
             onClick={this.onLogoutClick}
             className="btn btn-lg btn-warning "
           >
             Logout
           </button>
           <center>
-            <h1 className='backw12'>Student Dashboard</h1>
+            <h1 className="backw12">Student Dashboard</h1>
           </center>
-          <img className='backw2' src='./system.jpg' />
-          <img className='backwo2' src='./system.jpg' />
+          <img className="backw2" src="./student.jpg" />
+          <img className="backwo2" src="./student.jpg" />
           <nav class="navbar navbar-expand-lg  hn311 nav">
             <div class="container-fluid">
               <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <button className="btn btn-success"><a href="/CSN" style={{ textDecoration: 'none', color: 'white' }}>Add Student Notes</a> </button>
+                    <button className="btn btn-success">
+                      <a
+                        href="/CSN"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        Add Student Notes
+                      </a>{" "}
+                    </button>
                   </li>
-                  <li class="nav-item">
-                    <button className="btn btn-success"><a href="/HU" style={{ textDecoration: 'none', color: 'white' }}>See my Temporary password and email</a> </button>
-                  </li>
-
                 </ul>
               </div>
             </div>
           </nav>
 
-         <div className='mern1'>
-      <div className='row' style={{marginLeft:'40%', marginTop:'3%'}}>
-    <div class="card" style={{width:'20rem'}} >
-  <div class="card-body">
-  <i class='fas'><h4><b>&#xf044; Quick Links</b></h4></i>
-  <br/><br/>
-    <p> <a href="/CSN">Add Student Notes </a></p>
-
-    </div>
-    </div>
-    </div>
-
-         </div>
+          <div className="mern">
+            <div
+              className="row"
+              style={{ marginTop: "6%", marginBottom: "2%", marginLeft: "37%" }}
+            >
+              <div className="col">
+                <div class="card" style={{ width: "18rem" }}>
+                  <img src="./notes.jpg" class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Student notes</h5>
+                    <p>
+                      Add notes and summerize your work for pass the exams with better
+                      grades
+                    </p>
+                    <a href="/CSN" class="btn btn-primary">
+                      Click Here
+                    </a>
+                    &nbsp;
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

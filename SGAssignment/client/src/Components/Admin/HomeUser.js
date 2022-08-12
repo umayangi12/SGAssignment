@@ -72,6 +72,9 @@ export default class HomeUser extends Component {
                 Search
               </button>
             </form>
+            <br />
+            <br />
+            <br />
             <a class="navbar-brand" href="#"></a>
           </div>
         </nav>

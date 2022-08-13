@@ -28,3 +28,10 @@ The validation is included for the phone number and the email.
 Also, admin can search the user by their name, email or the id and as well as the student can search their notes by the title and the description.
 ![Screenshot (203)](https://user-images.githubusercontent.com/89120566/184459728-1e685e0c-a9ed-4f5d-b7e3-a829cd6f14d0.png)
  
+Run the test using the following command:
+
+npm run test
+
+Test results as follows..
+![Screenshot (207)](https://user-images.githubusercontent.com/89120566/184467683-548a62e0-6526-4a19-b0bf-4c7000e2f2e0.png)
+

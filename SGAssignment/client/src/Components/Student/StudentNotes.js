@@ -109,7 +109,7 @@ export default class StudentNotes extends Component {
                   className="btn btn-warning btn-lg text-dark"
                   type="submit"
                   style={{ marginTop: "15px" }}
-                  onClick={this.onSubmit}
+                  onClick={this.onSubmit} 
                 >
                   <i className="far fa-check-square"></i>
                   &nbsp; Save

@@ -30,9 +30,10 @@ import EditUser from "./Components/Admin/EditUser";
 import sendmail from "./Components/Admin/sendmail";
 
 
-
 function App() {
-  // Check for token to keep user logged in
+  
+
+    // Check for token to keep user logged in
   if (localStorage.jwtToken) {
     // Set auth token header auth
     const token = localStorage.jwtToken;
@@ -53,6 +54,7 @@ function App() {
     <Provider store={store}>
       <Router>
         <Navbar />
+        
         <Switch>
           <Route exact path="/" component={Home} />
 
@@ -77,6 +79,7 @@ function App() {
           <Route path="/EU/:id" component={EditUser}></Route>
 
           <Route path="/sendmail" component={sendmail}></Route>
+          
 
           <Switch>
             <PrivateRoute exact path="/dashboard" component={Dashboard} />
@@ -85,6 +88,7 @@ function App() {
           </Switch>
           <Route path="*" component={NotFound} />
         </Switch>
+      
       </Router>
       <Footer />
     </Provider>

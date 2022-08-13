@@ -40,6 +40,14 @@ class Dashboard1 extends Component {
                         Add Student Notes
                       </a>{" "}
                     </button>
+                    <button className="btn btn-success">
+                      <a
+                        href="/HSN"
+                        style={{ textDecoration: "none", color: "white" }}
+                      >
+                        All Details
+                      </a>{" "}
+                    </button>
                   </li>
                 </ul>
               </div>

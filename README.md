@@ -1,8 +1,7 @@
 # SGAssignment
 
 how to run the code:                                                    
-1.Download the repo                                                                                          
-2.Type npm run dev in the terminal
+1.Download the repo --> 2.Go to the correct folder using cd ASGassignment command. --> 3.run the code by typing npm run dev in the terminal
   
  Dummy accounts:                                                
  admin login email: admin@gmail.com - password: admin123                                         
@@ -25,3 +24,7 @@ The validation is included for the phone number and the email.
 
 ![Screenshot (199)](https://user-images.githubusercontent.com/89120566/184390413-3501aa6c-7008-48e0-9162-095b175e2f77.png)
 ![Screenshot (201)](https://user-images.githubusercontent.com/89120566/184390443-0cbb1757-9f82-447c-b8df-9225c94c57c3.png)
+
+Also, admin can search the user by their name, email or the id and as well as the student can search their notes by the title and the description.
+![Screenshot (203)](https://user-images.githubusercontent.com/89120566/184459728-1e685e0c-a9ed-4f5d-b7e3-a829cd6f14d0.png)
+ 

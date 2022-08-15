@@ -1,7 +1,7 @@
 # SGAssignment
 
 how to run the code:                                                    
-1.Download the repo --> 2.Go to the correct folder using cd ASGassignment command. --> 3.run the code by typing npm run dev in the terminal
+1.Download the repo --> 2.Go to the correct folder using cd ASGassignment command. --> 3.Install node modules (cd client -> npm i) , (SGAssignment -> npm i) --> 4.run the code by typing npm run dev in the terminal
   
  Dummy accounts:                                                
  admin login email: admin@gmail.com - password: admin123                                         

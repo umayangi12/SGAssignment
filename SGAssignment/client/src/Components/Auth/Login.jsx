@@ -77,6 +77,7 @@ class Login extends Component {
                           onChange={this.onChangeLogin}
                           error={errors.email}
                           classname={classnames("", {
+                            //return the value of the element's class attribute
                             invalid: errors.email || errors.emailNotFound,
                           })}
                         />{" "}
@@ -141,11 +142,13 @@ class Login extends Component {
   }
 }
 
-Login.propTypes = {
+Login.propTypes = { 
   loginUser: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
   errors: PropTypes.object.isRequired,
 };
+
+// passing read-only properties for a component to consume
 const mapStateToProps = (state) => ({
   auth: state.auth,
   errors: state.errors,

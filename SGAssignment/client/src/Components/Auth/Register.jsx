@@ -75,6 +75,7 @@ class Register extends Component {
                           value={role}
                           error={errors.role}
                           classname={classnames("", {
+                            //return the value of the element's class attribute
                             invalid: errors.role,
                           })}
                           type="text"

@@ -14,8 +14,8 @@ var nodemailer = require("nodemailer");
 
 const app = express();
 var server = http.Server(app);
-app.use(express.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, "static")));
+app.use(express.urlencoded({ extended: true })); //incoming requests with urlencoded payloads and is based on body-parser
+app.use(express.static(path.join(__dirname, "static"))); // middleware for serving static files
 
 //Routing
 app.get("/", function (req, response) {
@@ -84,7 +84,9 @@ mongoose
   })
   .then(() => console.log("MongoDB successfully connected"))
   .catch((err) => console.log(err));
+
 // Passport middleware
+//initialize passport
 app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);

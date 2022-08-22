@@ -30,7 +30,7 @@ Router.post("/registerAdmin", (req, res) => {
         email: "Email already exists",
       });
     } else {
-      const newUser = new User({
+      const newUser = new User({ //getting email,passowrd, and name entere by the user.
         name: req.body.name,
         email: req.body.email,
         password: req.body.password,
@@ -90,6 +90,7 @@ Router.post("/loginAdmin", (req, res) => {
         };
 
         //Sign Token
+        //information that needs to be places into the payload
         jwt.sign(
           payload,
           config.get("secretOrKey"),

@@ -91,9 +91,10 @@ Router.post("/login", (req, res) => {
         };
 
         //Sign Token
+        //information that needs to be places into the payload
         jwt.sign(
           payload,
-          config.get("secretOrKey"),
+          config.get("secretOrKey"), 
           {
             expiresIn: 63113852, //2 years in seconds    ‬
           },

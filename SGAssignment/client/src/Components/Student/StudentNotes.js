@@ -12,6 +12,24 @@ export default class StudentNotes extends Component {
     };
   }
 
+  btnDemo = (e) => {
+    e.preventDefault();
+    const { tile, description} = this.state;
+    const data = {
+      title : tile,
+      description: description
+    }
+    console.log(data)
+
+    this.setState(
+      {
+        title: "Assignment no 12",
+        description : "Assignment deadline is on 30th September"
+      }
+    )
+
+  }
+
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -109,11 +127,21 @@ export default class StudentNotes extends Component {
                   className="btn btn-warning btn-lg text-dark"
                   type="submit"
                   style={{ marginTop: "15px" }}
-                  onClick={this.onSubmit} 
+                  onClick={this.onSubmit}
                 >
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
+                &nbsp; &nbsp; &nbsp;
+                <button
+                  className="btn btn-success btn-lg text-dark"
+                  type="submit"
+                  style={{ marginTop: "15px" }}
+                  onClick={this.btnDemo}
+                >
+                  <i class="fas fa-bookmark"></i>
+                  &nbsp; <b>Demo</b>
+                </button>
               </center>
             </div>
           </div>

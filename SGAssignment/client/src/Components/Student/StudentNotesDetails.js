@@ -3,8 +3,8 @@ import axios from "axios";
 import "./Allcss.css";
 
 export default class StudentNotesDetails extends Component {
-  constructor(props) {
-    super(props);
+  constructor(props) { //initial state
+    super(props); //initiate the parent's constructor method, allows the component to inherit methods from its parent
 
     this.state = {
       post: {},
@@ -25,7 +25,7 @@ export default class StudentNotesDetails extends Component {
     });
   }
 
-  render() {
+  render() { //return HTML to the DOM
     const { title, description } = this.state.post;
     return (
       <div>

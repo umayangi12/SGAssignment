@@ -3,7 +3,7 @@ import axios from "axios";
 
 export default class HomeStuentNotes extends Component {
   constructor(props) {
-    super(props);
+    super(props); //allows the component to inherit methods from its parent
 
     this.state = {
       posts: [],

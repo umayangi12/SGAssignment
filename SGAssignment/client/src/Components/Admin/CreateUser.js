@@ -19,6 +19,35 @@ export default class CreateUser extends Component {
     };
   }
 
+  btnDemo = (e) => {
+    e.preventDefault();
+    const{uid, fname, lname, email, dob, mobile, status, password, accType} = this.state;
+    const data = {
+      uid: uid,
+      fname: fname,
+      lname: lname,
+      email: email,
+      dob: dob,
+      mobile: mobile,
+      status: status,
+      password: password,
+      accType: accType,
+    }
+    console.log(data)
+
+    this.setState({
+      uid: 50000,
+      fname: "Umayangi",
+      lname: "Ekanayake",
+      email: "uma1234@gmil.com",
+      dob: "12/12/1999",
+      mobile: "0765543108",
+      status: "Approved",
+      password: "uma1234",
+      accType: "student",
+    });
+  }
+
   handleInputChange = (e) => {
     const { name, value } = e.target;
 
@@ -255,6 +284,16 @@ export default class CreateUser extends Component {
                   <i className="far fa-check-square"></i>
                   &nbsp; Save
                 </a>
+                &nbsp; &nbsp; &nbsp;
+                <button
+                  className="btn btn-success btn-lg text-dark"
+                  type="submit"
+                  style={{ marginTop: "15px" }}
+                  onClick={this.btnDemo}
+                >
+                  <i class="fas fa-bookmark"></i>
+                  &nbsp; <b>Demo</b>
+                </button>
               </center>
             </div>
           </div>
